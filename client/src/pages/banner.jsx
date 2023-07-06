@@ -13,7 +13,7 @@ import 'aos/dist/aos.css';
 //npx create-react-app appname
 
 
-export const Banner = () => {
+function Banner(){
 
   const images = [img1, img2, img3, img4];
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -36,6 +36,7 @@ export const Banner = () => {
   });
       
   return (
+    
     <section className="banner" id="home" >
      <div className="imgWrapper">
       {images.map((img, index) => {
@@ -52,10 +53,12 @@ export const Banner = () => {
      <div className="centered">
           
           <h1> Artopia </h1>
-          <p>Where Artists meet Admirers!</p>
+          <p>Where Artists meet Admirers!!</p>
         
      </div>
 
     </section>
   )
 }
+
+export default Banner;

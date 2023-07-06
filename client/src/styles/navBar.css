@@ -96,7 +96,7 @@ p.danger {
 
 /************ Navbar Css ************/
 nav.navbar {
-    padding: 18px 70px 18px 70px;
+    padding: 13px 40px 13px 40px;
 
     position: fixed;
     width: 100%;
@@ -106,9 +106,9 @@ nav.navbar {
 }
 
 nav.navbar.scrolled {
-    padding: 15px 70px 15px 70px;
+    padding: 10px 40px 10px 40px;
     background: rgba(0, 0, 0, 0.25);
-    box-shadow: 0 6px 32px 0 rgba(0, 0, 0, 0.37);
+    border-bottom: 1px solid rgb(120, 120, 120);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 }
@@ -211,7 +211,7 @@ span.navbar-text {
     left: 0;
     top: 0;
     z-index: -1;
-    transition: 0.3s ease-out;
+    transition: 0.3s step-start;
 }
 
 .navbar-text button:hover {
@@ -279,6 +279,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 @media only screen and (max-width: 990px) {
+    nav.navbar {
+        background: rgba(0, 0, 0, 0.25);
+        border-bottom: 1px solid rgb(120, 120, 120);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+
     nav.navbar a.navbar-brand {
         width: 10%;
     }
@@ -290,7 +297,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
         margin-top: 3px;
         margin-bottom: 3px;
         padding: 0 10px;
-        font-size: 11px;
+        font-size: 20px;
         opacity: 0.75;
         text-align: end;
     }
@@ -319,8 +326,24 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
         border: 1px solid #fff;
         padding: 5px 15px;
-        font-size: 11px;
+        font-size: 20px;
         margin-left: 2px;
         margin-right: 0px;
     }
+}
+
+@media only screen and (max-width:600px) {
+
+    nav.navbar .navbar-nav .nav-link.navbar-link {
+
+        font-size: 15px;
+
+    }
+
+    .navbar-text button {
+
+        font-size: 15px;
+    }
+
+
 }

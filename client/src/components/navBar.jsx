@@ -43,25 +43,23 @@ export const NavBar = () => {
                   <span className="navbar-toggler-icon"></span>
               </Navbar.Toggle>
               <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className="me-auto">
+              <Nav className="m-auto">
                   <Nav.Link href="/" className="navbar-link">
                       Home
                   </Nav.Link>
-                  <Nav.Link href="#" className="navbar-link" >
+                  <Nav.Link href="/Products" className="navbar-link" >
                       Products</Nav.Link>
-                  <Nav.Link href="#" className="navbar-link">
+                  <Nav.Link href="/Orders" className="navbar-link">
                    Your Orders</Nav.Link>
-                   <Nav.Link href="#" className="navbar-link">
+                   <Nav.Link href="/Cart" className="navbar-link">
                    Cart</Nav.Link>
               </Nav>
               <span className="navbar-text">
-                  <div className="social-icon">
-                      <a href='#'><img src=""></img></a>
-                      <a href='#'><img src=""></img></a>
-                  </div>
+                  <Nav.Link href="/Account" className="navbar-link">
                   <button className="vvd" onClick={()=>console.log('connect')}>
                       <span>Account</span> 
                   </button>
+                  </Nav.Link>
               </span>
               </Navbar.Collapse>
           </Container>
