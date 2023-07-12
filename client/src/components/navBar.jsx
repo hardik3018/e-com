@@ -3,6 +3,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import "../styles/navBar.css";
+import { Link } from 'react-router-dom';
 
 
 export const NavBar = () => {
@@ -47,8 +48,8 @@ export const NavBar = () => {
                   <Nav.Link href="/" className="navbar-link">
                       Home
                   </Nav.Link>
-                  <Nav.Link href="/Products" className="navbar-link" >
-                      Products</Nav.Link>
+                  <Link to="/Products" className="navbar-link" >
+                      Products</Link>
                   <Nav.Link href="/Orders" className="navbar-link">
                    Your Orders</Nav.Link>
                    <Nav.Link href="/Cart" className="navbar-link">

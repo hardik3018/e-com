@@ -290,7 +290,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
         width: 10%;
     }
 
-    nav.navbar .navbar-nav .nav-link.navbar-link {
+    nav.navbar .navbar-nav .nav-link .navbar-link {
         font-weight: 200;
         color: #fff !important;
         letter-spacing: 0.8px;
@@ -301,6 +301,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
         opacity: 0.75;
         text-align: end;
     }
+
 
     nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
     nav.navbar .navbar-nav a.nav-link.navbar-link.active {
