@@ -1,10 +1,10 @@
 .foot {
     background-color: rgb(14, 14, 14);
-    background-size: cover;
     color: rgb(255, 255, 255);
     margin-top: 10%;
     padding: 100px 70px 100px 70px;
     text-align: center;
+    z-index: 9999;
 
 
 }

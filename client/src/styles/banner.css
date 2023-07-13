@@ -1,22 +1,16 @@
 /************ Banner Css ************/
 
+
 .banner {
-
-    display: block;
     margin-top: 99;
-    padding: 200px 70px 100px 70px;
+    width: 100%;
     height: 600px;
-    background-position: center;
-
-    align-items: center;
-    justify-content: center;
-    background-repeat: no-repeat;
+    z-index: -9999;
 }
 
 .banner img {
     opacity: 0.3;
     position: absolute;
-    left: 0;
     top: 0;
     width: 100%;
     height: 90%;
@@ -82,12 +76,13 @@
 }
 
 .image {
-    display: none;
+    display: block;
+    z-index: -9999;
 }
 
 .imgWrapper {
     width: 100%;
-    height: 100vh;
+    height: 90%;
 }
 
 @keyframes blender {
@@ -111,9 +106,7 @@
 
 .imageActive {
     float: left;
-    width: 150vw;
     height: 100vh;
-    object-fit: cover;
     opacity: 0;
     animation: blender 5s linear 50ms;
 }

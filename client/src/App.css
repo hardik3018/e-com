@@ -74,12 +74,6 @@ select:focus {
 }
 
 
-@media (min-width:1700px) {
-  main .container {
-    max-width: 100%;
-  }
-}
-
 
 
 p.success {
@@ -104,4 +98,9 @@ p.danger {
 
 .demo h1 {
   color: olivedrab;
+}
+
+.App {
+  width: auto;
+  display: block;
 }
