@@ -38,27 +38,27 @@ export const NavBar = () => {
           
           <Container>
               <Navbar.Brand href="/" className='navbar-brand'>
-                  <h3>Artopia</h3>
+                  <h4>Artopia</h4>
               </Navbar.Brand>
               <Navbar.Toggle aria-controls="basic-navbar-nav">
                   <span className="navbar-toggler-icon"></span>
               </Navbar.Toggle>
               <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="m-auto">
-                  <Nav.Link href="/" className="navbar-link">
+                  <Link  to ="/" className="navbar-link">
                       Home
-                  </Nav.Link>
+                  </Link>
                   <Link to="/Products" className="navbar-link" >
                       Products</Link>
-                  <Nav.Link href="/Orders" className="navbar-link">
-                   Your Orders</Nav.Link>
-                   <Nav.Link href="/Cart" className="navbar-link">
-                   Cart</Nav.Link>
+                  <Link to="/Orders" className="navbar-link">
+                   Your Orders</Link>
+                   <Link to="/Cart" className="navbar-link">
+                   Cart</Link>
               </Nav>
               <span className="navbar-text">
                   <Nav.Link href="/Account" className="navbar-link">
                   <button className="vvd" onClick={()=>console.log('connect')}>
-                      <span>Account</span> 
+                      <span>Login / Register</span> 
                   </button>
                   </Nav.Link>
               </span>

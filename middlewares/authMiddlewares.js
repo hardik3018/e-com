@@ -1,4 +1,5 @@
 import JWT from "jsonwebtoken";
+import UserModel from "../models/UserModel";
 
 //protect Rotes on token base
 
@@ -15,6 +16,8 @@ export const requireSignIn = async (req, res, next) => {
       req.headers.authorization,
       process.env.JWT_SECRET
     );
+
+    req.user = decode;
     next();
   } catch (error) {
     // catch any error
@@ -30,4 +33,36 @@ export const requireSignIn = async (req, res, next) => {
     });
   }
   //
+};
+
+// check admin acess
+
+export const isAdmin = async (req, res, next) => {
+  try {
+    // user id
+    const user = await UserModel.findById(req.user._id);
+
+    // checking if user is admin or not
+    // as admin has user rolw == 1
+    if (user.role !== 1) {
+      return res.status(401).send({
+        success: false,
+        message: "UnAuthorized Access",
+      });
+    } else {
+      next();
+    }
+  } catch (error) {
+    // catch any error
+
+    console.log(error);
+
+    // HTTP Status Code 500: "Internal Server Error"
+
+    res.status(500).send({
+      success: false,
+      message: "Error in Authentication",
+      error,
+    });
+  }
 };
